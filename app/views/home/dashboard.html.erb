@@ -1,0 +1,66 @@
+
+<div class="container text-center mt-5 mb-5 ">
+    <h1 class="bg-light py-3">Dashboard</h1>
+</div>
+
+<div class="container mb-5">
+    <%= column_chart @sales_last_12_months, title: "Ventas últimos 12 meses" %>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <%= column_chart @quantity_last_12_months, title: "Cantidad últimos 12 meses" %>
+        </div>
+        <div class="col-6">
+            <%= column_chart @average_last_12_months, title: "Promedio venta mensual últimos 12 meses" %>
+        </div>
+    </div>
+</div>
+<br><br>
+<hr>
+<br><br>
+<div class="container">
+    <h2 class="text-center bg-light py-3">PieCharts: Cantidad de ventas según origen</h2>
+</div>
+<br><br>
+<div class="row">
+    <div class="d-inline col-6">
+        <%= pie_chart @pie_chart_origin_12_months, title: "últimos 12 meses" %>
+    </div>
+    <div class="d-inline col-6">
+        <%= pie_chart @pie_chart_origin_6_months, title: "últimos 6 meses" %>
+    </div>
+</div>
+
+<div class="row">
+    <div class="d-inline col-6">
+        <%= pie_chart @pie_chart_origin_3_months, title: "últimos 3 meses" %>
+    </div>
+    <div class="d-inline col-6">
+        <%= pie_chart @pie_chart_origin_last_month, title: "Último mes" %>
+    </div>
+</div>
+<br><br>
+<hr>
+<br><br>
+<div class="container">
+    <h2 class="text-center bg-light py-3">PieCharts: Cantidad de ventas según mezcla de café</h2>
+</div>
+<br><br>
+<div class="row">
+    <div class="d-inline col-6">
+        <%= pie_chart @pie_chart_blend_name_12_months, title: "Últimos 12 meses" %>
+    </div>
+    <div class="d-inline col-6">
+        <%= pie_chart @pie_chart_blend_name_6_months, title: "Últimos 6 meses" %>
+    </div>
+</div>
+<div class="row">
+    <div class="d-inline col-6">
+        <%= pie_chart @pie_chart_blend_name_3_months, title: "Últimos 3 meses" %>
+    </div>
+    <div class="d-inline col-6">
+        <%= pie_chart @pie_chart_blend_name_last_month, title: "Último mes" %>
+    </div>
+</div>
